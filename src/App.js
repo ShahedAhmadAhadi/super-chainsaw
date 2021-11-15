@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
 import Posts from './Components/Posts';
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ function App() {
       </header> */}
       <h1>Lorem Ipsom</h1>
       <Posts />
+      <ReactQueryDevtools />
     </div>
     </QueryClientProvider>
   );

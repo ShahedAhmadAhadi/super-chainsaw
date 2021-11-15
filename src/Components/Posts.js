@@ -7,7 +7,7 @@ async function fetchPosts() {
 }
 
 function Posts() {
-    const resp = useQuery("posts", fetchPosts)
+    const resp = useQuery("posts", fetchPosts, { staleTime: 4000})
     console.log(resp)
     const { data, isLoading, isError, error } = resp
 
