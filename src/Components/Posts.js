@@ -11,21 +11,19 @@ function Posts() {
     const resp = useQuery("posts", fetchPosts, { staleTime: 4000})
     console.log(resp)
     const { data, isLoading, isError, error } = resp
+    const [selectedPost, setSelectedPost] = useState(null)
 
     if (isLoading) {
         return <h3>Loading...</h3>
     }
 
-    const [selectedPost, setSelectedPost] = useState(null)
-
     if (isError) return <><h4>Something went wrong</h4><h4>{error.toString()}</h4></>
-
     return (
         <div>
             <ul>
                 {data && data.map(post => (
                     <li key={post.id}
-                    onClick={() => setSelectedPost(post)}>
+                    onClick={() => setSelectedPost(post)} className="post">
                         {post.title}
                     </li>
                 ))}
