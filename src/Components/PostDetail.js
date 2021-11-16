@@ -8,7 +8,7 @@ async function fetchComments(postId) {
 
 function PostDetail({post}) {
 
-    const resp = useQuery("Post", () => fetchComments(post.id))
+    const resp = useQuery(["Comments", post.id], () => fetchComments(post.id))
     console.log(resp)
     const {data, isLoading, isError, error} = resp
 
