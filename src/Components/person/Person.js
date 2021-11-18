@@ -1,10 +1,14 @@
 import React from 'react'
 
-function Person() {
+function Person({ name, hairColor, eyeColor }) {
     return (
-        <div>
-            
-        </div>
+        <li>
+            {name}
+            <ul>
+                <li>hair: {hairColor}</li>
+                <li>eyes: {eyeColor}</li>
+            </ul>
+        </li>
     )
 }
 
