@@ -44,3 +44,16 @@
 .post:hover{
   color: #8785ec;
 }
+
+.loading{
+  color: #61dafb;
+  font-size: 2em;
+}
+
+.fetch{
+  color: #232abb;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
